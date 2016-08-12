@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>HTML</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Anton Williams" />
+</head>
+
+<style>
+body{
+  padding: 0 100px;
+  font-family: sans-serif;
+}
+.wrapper{
+background:#eee;padding:30px;box-sizing: border-box;
+}
+
+.code{
+  background:black;color:silver;padding:20px;margin: 0 0 85px 0;
+}
+.codeExplain{
+  background:#16a085;color:white;padding:20px;margin: 20px 0 0 0;
+}
+
+::selection{
+  background: #16a085;
+  color: white;
+}
+-moz-::selection{
+  color: white;
+  background:#16a085;
+}
+
+.title{
+  font-size: 50px; padding: 20px;text-align: center; color: black;
+  animation: tilt 3s infinite;
+}
+
+@keyframes tilt {
+  0%{transform:rotate(-10deg)}
+  50%{transform:rotate(10deg)}
+  100%{transform:rotate(-10deg)}
+}
+
+.code b{
+  color: white;
+}
+</style>
+
+<body>
+
+<!-- HTML -->
+
+
+<!--
+
+What is HTML?
+
+Hypertext Markup Language
+
+"HTML (Hypertext Markup Language) is the set of markup
+symbols or codes inserted in a file intended for display
+on a World Wide Web browser page. The markup tells the
+Web browser how to display a Web page's words and images
+for the user."
+
+HTML Creates the content of web page without styling, it
+defines the structure of the page and the text and images
+within it.
+
+ -->
+
+
+<!-- Tags -->
+
+
+<!--
+Paragraph tag
+Block element (100% width)
+-->
+<h1 class="title">HTML</h1>
+<div class="codeExplain">
+  <p>
+    What is HTML?
+  </p>
+
+  <p>Hypertext Markup Language</p>
+
+  <p>"HTML (Hypertext Markup Language) is the set of markup
+  symbols or codes inserted in a file intended for display
+  on a World Wide Web browser page. The markup tells the
+  Web browser how to display a Web page's words and images
+  for the user."</p>
+
+  <p>HTML Creates the content of web page without styling, it
+  defines the structure of the page and the text and images
+  within it.</p><br /><br />
+
+<h2>Sections</h2>
+  <ul>
+    <li>
+      <a href="#a">Links</a>
+    </li>
+    <li>
+      <a href="#img">Images</a>
+    </li>
+    <li>
+      <a href="#float">Float</a>
+    </li>
+    <li>
+      <a href="#span">Span</a>
+    </li>
+    <li>
+      <a href="#hr">Line across (hr)</a>
+    </li>
+    <li>
+      <a href="#h1">Header</a>
+    </li>
+    <li>
+      <a href="#boxmodel">Box Model (padding/border/margin)</a>
+    </li>
+    <li>
+      <a href="#center">Center</a>
+    </li>
+    <li>
+      <a href="#text">Text style</a>
+    </li>
+    <li>
+      <a href="#color">Colour</a>
+    </li>
+    <li>
+      <a href="#divs">Divs</a>
+    </li>
+  </ul>
+</div>
+
+<br />
+
+<p>Hello World</p>
+<div class="codeExplain">
+
+    Paragraph tag<br />
+    Block element (100% width)<br />
+</div>
+<div class="code">
+  <p>
+    &lt;p&gt;Hello World&lt;/p&gt;
+  </p>
+</div>
+<!-- <p>
+  <a href="#bottom">Click me to see the code snippets to copy</a>
+</p> -->
+
+
+<!--
+--><br />
+<a id="a" href="http://internetconsultancy.pro">Click me!</a>
+<br />
+<!-- This break tag makes the line go down -->
+<br />
+
+<a href="http://internetconsultancy.pro" target="_blank">This link goes to another tab because of target="_blank"</a>
+
+<br />
+
+<div class="codeExplain">
+
+
+  Anchor tag<br />
+  Link - inline element (width is as big as the content inside of it)<br /><br />
+  The break tag make the line go down &lt;br/&gt;
+</div>
+<div class="code">
+  <p>
+    &lt;a href="http://internetconsultancy.pro"&gt;Click me!&lt;/a&gt;<br />
+    &lt;br/&gt;<br />
+    &lt;a href="http://internetconsultancy.pro" <b>target="_blank"</b>&gt;This link goes to another tab because of target="_blank"&lt;/a&gt;
+  </p>
+</div>
+
+
+<!--
+Image tag
+Inline element that shows an image
+src is the source of the image
+alt is the description of the image
+auto will set the height/width to the correct ratio of the image
+width 100% height auto for full width image
+-->
+<img src="https://goo.gl/uVqEDM" alt="Icaal logo" width="200px" height="auto" id="img"/>
+<div class="codeExplain">
+  Image tag<br />
+  Inline element that shows an image<br />
+  src is the source of the image<br />
+  alt is the description of the image<br />
+  auto will set the height/width to the correct ratio of the image<br />
+  width 100% height auto for full width image
+</div>
+<div class="code">
+  <p>
+    &lt;img src="https://goo.gl/uVqEDM" alt="Icaal logo" width="200px" height="auto"/&gt;
+  </p>
+</div>
+<!-- You can wrap anything in an anchor to link it -->
+<a href="http://internetconsultancy.pro" target="_blank">
+<h2>This is all a link!</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.</p>
+<img src="https://pbs.twimg.com/media/CgFxxnqW4AACPmm.jpg" alt="cat" width="100%" height="auto"/>
+<h2>This is all a link!</h2>
+</a>
+<!-- End of link -->
+
+<div class="code">
+  <p>
+    &lt;a href="http://internetconsultancy.pro" target="_blank"&gt;<br />
+    <br />&lt;h2&gt;This is all a link!&lt;/h2&gt;
+    <br />&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.&lt;/p&gt;
+    <br />&lt;img src="https://pbs.twimg.com/media/CgFxxnqW4AACPmm.jpg" alt="cat" width="100%" height="auto"/&gt;<br />
+    <br />&lt;h2&gt;This is all a link!&lt;/h2&gt;<br />
+    <br />&lt;/a&gt;
+</div>
+
+<br />
+
+
+<!-- An image can also be floated in the text to make it align left or right -->
+<p><h2 id="float">Float!</h2> <img src="http://goo.gl/hZW5HR" alt="cat" width="200px" height="auto" style="float:right;"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.</p>
+
+
+<div class="codeExplain">
+An image can also be floated in the text to make it align left or right<br />
+This image is inside a paragraph text and flows out of the flow of the content to the right
+</div>
+<div class="code">
+  <p>
+    &lt;p&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Float!&lt;/h2&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="http://goo.gl/hZW5HR" alt="cat" width="200px" height="auto" style=<b>"float:right;"</b>/><br />&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.<br />&lt;/p&gt;
+  </p>
+</div>
+
+
+<!--
+Span tag
+A span is an inline element normally used within a paragraph tag to highlight certain parts of the text you want to look different
+-->
+<h2 id="span">Span!</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span style="color:red;">Integer laoreet laoreet odio eu ullamcorper.</span> Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. <span style="font-weight: bold;">Pellentesque</span> habitant morbi tristique senectus et netus et malesuada <span style="letter-spacing: 5px;">fames ac turpis egestas.</span> Maecenas quis iaculis sapien.</p>
+
+
+<div class="codeExplain">
+Span tag<br />
+A span is an inline element normally used within a paragraph tag to highlight certain parts of the text you want to look different
+</div>
+<div class="code">
+  <p>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <b>&lt;span style="color:red;"></b>Integer laoreet laoreet odio eu ullamcorper.<b>&lt;/span></b>
+  </p>
+</div>
+
+<!--
+hr tag
+This tag creates a line that goes 100% width of the element it is inside - used to seperate content
+-->
+
+
+
+<hr />
+<div id="hr" class="codeExplain">
+hr tag<br />
+This tag creates a line that goes 100% width of the element it is inside - used to seperate content
+</div>
+<div class="code">
+  <p>
+    <b>&lt;hr/&gt;</b>
+  </p>
+</div>
+
+<br />
+
+<!--
+header tags
+These are 1-6 headers that define the importance of the title
+-->
+
+<h1 id="h1">Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+
+<div class="codeExplain">
+Header tags<br />
+These are 1-6 headers that define the importance of the title
+</div>
+<div class="code">
+  <p>
+    &lt;h1&gt;Header 1&lt;/h1><br />
+    &lt;h2&gt;Header 2&lt;/h2><br />
+    &lt;h3&gt;Header 3&lt;/h3><br />
+    &lt;h4&gt;Header 4&lt;/h4><br />
+    &lt;h5&gt;Header 5&lt;/h5><br />
+    &lt;h6&gt;Header 6&lt;/h6><br />
+  </p>
+</div>
+
+<br />
+<hr />
+<br />
+
+
+
+<!-- (inline) CSS -->
+
+<!--
+
+What is CSS?
+
+Cascading Style Sheets
+
+"Cascading Style Sheets (CSS) is a style sheet language
+used for describing the presentation of a document written
+in a markup language."
+
+CSS is used to style the HTML and make the page look good, it is used for
+colours, backgrounds, layout, font, and much more.
+
+-->
+<div class="codeExplain" id="box">
+  <p>
+    What is CSS?
+  </p>
+
+  <p>Cascading Style Sheets</p>
+
+  <p>"Cascading Style Sheets (CSS) is a style sheet language
+  used for describing the presentation of a document written
+  in a markup language."</p>
+
+  <p>CSS is used to style the HTML and make the page look good, it is used for
+  colours, backgrounds, layout, font, and much more.</p>
+</div>
+
+<h2>Box model</h2>
+<img src="https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif" alt="box model" />
+<br />
+
+<!-- Here is an example of box model in use in 4 steps -->
+<div class="codeExplain">
+  <p>
+    Box Model
+  </p>
+  <p>
+    What is box model?
+  </p>
+  <p>
+    "The CSS Box Model. All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content."
+  </p>
+  <p>Here is an example of box model in use in 4 steps</p>
+</div>
+
+<br />
+<!-- STEP 1: content
+The content is the inner most box which is just as big as the content being held (100px in this case because of width:100px)
+ -->
+<p style=" background:red; width: 100px; ">Hello</p>
+<div class="codeExplain">
+<b>STEP 1: content</b><br />
+The content is the inner most box which is just as big as the content being held (100px in this case because of width:100px)
+</div>
+<div class="code">
+  <p>
+    &lt;p style=" background:red; <b>width: 100px;</b> ">Hello&lt;/p>
+  </p>
+</div>
+<!-- STEP 2: padding
+The padding adds more room inside of the content box (now 200px width because 100px + 50px + 50px)
+-->
+<p style=" background:red; width: 100px; padding: 50px;">Hello</p>
+<div class="codeExplain">
+<b>STEP 2: padding</b><br />
+The padding adds more room inside of the content box (now 200px width because 100px + 50px + 50px)
+</div>
+<div class="code">
+  <p>
+    &lt;p style=" background:red; width: 100px; <b>padding: 50px;</b>">Hello&lt;/p>
+  </p>
+</div>
+<!-- STEP 3:  border
+The border adds size to the edge of the content (now 240px)
+-->
+<p style=" background:red; width: 100px; padding: 50px; border:20px solid black;">Hello</p>
+<div class="codeExplain">
+<b>STEP 3:  border</b><br />
+The border adds size to the edge of the content (now 240px)
+</div>
+<div class="code">
+  <p>
+    &lt;p style=" background:red; width: 100px; padding: 50px; <b>border:20px solid black;</b>">Hello&lt;/p>
+  </p>
+</div>
+<!-- STEP 4:  margin
+The margin is space outside the element itself; pushing away other elements and moving the element itself
+(this doesnt add width to the element but takes up space so now the element has taken up 340px)
+-->
+<p style=" background:red; width: 100px; padding: 50px; border:20px solid black; margin: 50px;">Hello</p>
+<div class="codeExplain">
+<b>STEP 4:  margin</b><br />
+The margin is space outside the element itself; pushing away other elements and moving the element itself<br />
+(this doesnt add width to the element but takes up space so now the element has taken up 340px)
+</div>
+<div class="code">
+  <p>
+    &lt;p style=" background:red; width: 100px; padding: 50px; border:20px solid black; <b>margin: 20px;</b>">Hello&lt;/p>
+  </p>
+</div>
+
+
+<!--
+All padding/margin can be done on any side (all sides, topbotom/leftright or top/right/bottom/left)
+-->
+<div class="codeExplain">
+All padding/margin can be done on any side (all sides, topbotom/leftright or top/right/bottom/left)
+</div>
+<br />
+<!-- padding: 50px(top and bottom) 20px(left and right); -->
+<p style="color: white; background:blue; width: 100px; padding: 50px 20px;">Hello</p>
+<div class="codeExplain">
+padding: 50px(top and bottom) 20px(left and right)
+</div>
+<div class="code">
+  <p>
+    &lt;p style="color: white; background:blue; width: 100px; <b>padding: 50px 20px;</b>">Hello&lt;/p>
+  </p>
+</div>
+<!-- padding: 50px(top) 10px(right) 100px(bottom) 0px(left) -->
+<p style="color: white; background:blue; width: 100px; padding: 50px 10px 100px 0px;">Hello</p>
+
+<div class="codeExplain">
+padding: 50px(top) 10px(right) 100px(bottom) 0px(left)
+</div>
+<div class="code">
+  <p>
+    &lt;p style="color: white; background:blue; width: 100px; <b>padding: 50px 10px 100px 0px;</b>">Hello&lt;/p>
+  </p>
+</div>
+
+<!-- This can also be done by doing them individually -->
+<p style="color: white; background:green; width: 100px; padding: 50px; border-bottom:20px solid yellow;">Hello</p>
+<div class="codeExplain">
+This can also be done by doing them individually
+</div>
+<div class="code">
+  <p>
+    &lt;p style="color: white; background:green; width: 100px; padding: 50px; <b>border-bottom:20px solid yellow;</b>">Hello&lt;/p>
+  </p>
+</div>
+<br />
+<hr />
+
+
+
+<br />
+
+<!-- Centering -->
+
+<!--
+There are 2 main ways to center.
+
+text-align:center;
+This is for when you want to center inline elements (such as text)
+You use text-align:center; on the containter
+
+EXAMPLE
+-->
+<div class="codeExplain" id="center">
+<p>
+  Centering
+</p><p>
+
+There are 2 main ways to center.
+</p><p>
+
+text-align:center;<br />
+This is for when you want to center inline elements (such as text)
+You use text-align:center; on the containter
+</p>
+<b>EXAMPLE</b>
+</div>
+
+<div style="margin-bottom: 50px; text-align:center">
+
+  <h2>Centered Title</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" alt="centered img" width="100px" height="auto"/>
+  <p>
+    hello this is centered! (using text-align: center;)
+  </p>
+
+
+<!--
+text-align:center; will not center block elements like a container or wrapper!
+-->
+
+  <div style="width:200px;height:200px;background:red;" class="container">
+    <p>
+      This container isn't centered
+    </p>
+  </div>
+
+
+<!--
+What is a div?
+A div is a division element that is block.
+Divs are generic containers for content, they can be used for layouts. (for example a wrapper could be a div)
+-->
+</div>
+
+<div class="codeExplain">
+text-align:center; will not center block elements like a container or wrapper!
+</div>
+<div class="code">
+  <p>
+    &lt;div style="margin-bottom: 50px; <b>text-align:center</b>"><br /><Br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2>Centered Title&lt;/h2><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" alt="centered img" width="100px" height="auto"/><Br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p>
+      hello this is centered! (using text-align: center;)
+    &lt;/p><br />
+
+<br />
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:200px;height:200px;background:red;" class="container"><br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>
+        This container isn't centered
+      &lt;/p><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></b><br /><Br />
+      &lt;/div>
+  </p>
+</div>
+
+
+<!--
+The other way to center is:
+
+margin: 0 auto;
+This is for centering block elements like the div above or a wrapper.
+
+0  (this is the top and bottom margin, it can be any number like 20px it doens't have to be 0)
+auto  (this is the important bit, it makes the block element have auto margin on both sides)
+
+EXAMPLE
+-->
+
+<div class="codeExplain">
+  <p>
+    The other way to center is:
+  </p><p>
+
+  margin: 0 auto;
+  </p><p>
+
+  This is for centering block elements like the div above or a wrapper.<br />
+  0  (this is the top and bottom margin, it can be any number like 20px it doens't have to be 0)<br />
+  auto  (this is the important bit, it makes the block element have auto margin on both sides)
+  </p>
+  <b>EXAMPLE</b>
+</div><br />
+
+
+<div class="wrapper" style="width:1200px;  margin: 0 auto;">
+  <h1>Nice</h1>
+
+  <p>
+    This is a centered wrapper using margin: 0 auto!
+  </p>
+
+  <div class="code">
+    <p>
+      &lt;div class="wrapper" style="width:800px;  <b>margin: 0 auto;</b>">
+      </p>
+  </div>
+
+  <p>
+    Now we can put everything in this wrapper to keep the content centered.
+  </p>
+
+  <img src="https://pbs.twimg.com/media/Cm2uiKdWIAEHRYo.jpg" width="100%" height="auto"/>
+
+
+  <hr style="margin: 50px 0;"/>
+
+  <p id="text">
+    Let's style text...
+  </p>
+
+<!--
+Text style
+
+There are many ways to style text using CSS
+But you can also use html alternatives
+-->
+
+<div class="codeExplain">
+  Text style<br /><br />
+
+  There are many ways to style text using CSS
+  But you can also use html alternatives
+</div>
+<br /><br />
+
+<!-- 2 ways to bold text -->
+<p style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>  <br />
+<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p></b>
+
+<div class="codeExplain">
+2 ways to bold text
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="font-weight: bold;"</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p> <br /><Br />
+    &lt;p><b>&lt;b></b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.<b>&lt;/b></b>&lt;/p><Br />
+  </p>
+</div>
+
+<!-- 2 ways to change font style -->
+<p style="font-style:italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>  <br />
+<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</i></p>
+
+<div class="codeExplain">
+2 ways to change font style
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="font-style: italic;"</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p> <br /><Br />
+    &lt;p><b>&lt;i></b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.<b>&lt;/i></b>&lt;/p><Br />
+  </p>
+</div>
+
+<!-- Make uppercase/lowercase -->
+<p style="text-transform:uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>
+
+<div class="codeExplain">
+Make uppercase/lowercase
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="text-transform:uppercase"</b>>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p>
+  </p>
+</div>
+
+<!-- letter spacing (might not use this, maybe for a title)-->
+<p style="letter-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>
+
+<div class="codeExplain">
+Letter spacing (might not use this, maybe for a title)
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="letter-spacing: 5px;"</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p>
+  </p>
+</div>
+
+
+<!-- word spacing -->
+<p style="word-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>
+
+<div class="codeExplain">
+Word spacing
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="word-spacing: 5px;"</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p>
+  </p>
+</div>
+
+
+<!-- text shadow -->
+<p style="text-shadow: 0px 0px 5px #444;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>
+<h2 style="font-size:30px; text-shadow: 3px 3px 0 red;">SHADOW</h2>
+<div class="codeExplain">
+  <p>
+    Text shadow</p><br />
+  5px (the first number is the distance to the right the shadow is)<br />
+  10px (the second number is the distance to the bottom the shadow is)<br />
+  0px (the third number is how much the shadow spreads/blurs)<br />
+  red (the last part is the color)
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="text-shadow: 0px 0px 5px #444;"</b>>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p><br /><br />
+    &lt;h2 style="font-size:30px; <b>text-shadow: 3px 3px 0 red;</b>">SHADOW&lt;/h2>
+  </p>
+</div>
+
+<!-- line height -->
+<p style="line-height: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.</p>
+
+<div class="codeExplain">
+Line height
+</div>
+<div class="code">
+  <p>
+    &lt;p <b>style="line-height:30px"</b>>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.&lt;/p>
+  </p>
+</div>
+
+
+<!--
+text-shadow:
+5px (the first number is the distance to the right the shadow is)
+10px (the second number is the distance to the bottom the shadow is)
+0px (the third number is how much the shadow spreads/blurs)
+red (the last part is the color)
+-->
+
+
+<br />
+<hr />
+<br />
+
+<h2 id="color">
+  <span style="color: red ;">C</span><span style="color: orange ;">o</span><span style="color: yellow;">l</span><span style="color:green ;">o</span><span style="color:blue">u</span><span style="color: indigo;">r</span><span style="color: violet;">?</span>
+</h2>
+
+<!--
+Colour
+
+There are 3 main ways to do colour
+
+keywords:
+There are words like "red" or "white" or "hotpink"
+-->
+<div class="codeExplain">
+  <p>
+  There are 3 main ways to do colour
+  </p>
+</div>
+
+<p style="color: red;">
+red
+</p>
+
+<div class="codeExplain">
+  keywords:<br />
+  There are words like "red" or "white" or "hotpink"
+</div>
+<div class="code">
+  <p>
+    &lt;p style="<b>color: red;</b>">
+      red
+    &lt;/p>
+  </p>
+</div>
+
+<!--
+hex:
+Hex colours huse a hexadecimal code to make the rgb colours
+for example: #ffffff is white
+the first two numbers are the R value, then the G value, then the B value.
+so #ff0000 is red
+-->
+
+<p style="color: #ff0000;">
+  still red
+</p>
+
+<div class="codeExplain">
+  hex:<br />
+  Hex colours huse a hexadecimal code to make the rgb colours<br />
+  for example: #ffffff is white<br />
+  the first two numbers are the R value, then the G value, then the B value.<br />
+  so #ff0000 is red
+</div>
+<div class="code">
+  <p>
+    &lt;p style="<b>color: #ff0000;</b>">
+      still red
+    &lt;/p>
+  </p>
+</div>
+
+<!--
+The last way is RGB value
+this is when you define the red green and blue values
+-->
+
+<p style="color: rgb(255,0,0);">
+  red red red
+</p>
+
+<div class="codeExplain">
+
+  The last way is RGB value<br />
+  this is when you define the red green and blue values
+</div>
+<div class="code">
+  <p>
+    &lt;p style="<b>rgb(255,0,0);</b>">
+      red red red
+    &lt;/p>
+  </p>
+</div>
+
+<!--
+The rgb value is useful as you can add an alpha value to choose the opacity.
+-->
+
+<p style="color: rgba(255,0,0,0.5);">
+  slightly transparent red
+</p>
+
+<div class="codeExplain">
+
+  The rgb value is useful as you can add an alpha value to choose the opacity.
+</div>
+<div class="code">
+  <p>
+    &lt;p style="<b>rgba(255,0,0,0.5);</b>">
+      slightly transparent red
+    &lt;/p>
+  </p>
+</div>
+
+<div style="width: 200px;height: 150px; background: hotpink;" id="divs">
+
+</div>
+
+<div class="codeExplain">
+<p>
+  Divs
+</p><br />
+
+What are divs?<Br />
+A div is a division element that is block.<Br />
+Divs are generic containers for content, they can be used for layouts. (for example a wrapper could be a div)
+</div>
+<div class="code">
+  <p>
+    &lt;div style="width: 200px;height: 150px; background: hotpink;">
+
+    &lt;/div>
+  </p>
+</div>
+
+
+
+</div>
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+</body>
+
+</html>
