@@ -1,0 +1,346 @@
+<style>
+body{
+  padding: 50px;
+  font-family: sans-serif;
+}
+.wrapper{
+background:#eee;padding:30px;box-sizing: border-box;
+}
+</style>
+<!-- HTML -->
+
+
+<!--
+
+What is HTML?
+
+Hypertext Markup Language
+
+"HTML (Hypertext Markup Language) is the set of markup
+symbols or codes inserted in a file intended for display
+on a World Wide Web browser page. The markup tells the
+Web browser how to display a Web page's words and images
+for the user."
+
+HTML Creates the content of web page without styling, it
+defines the structure of the page and the text and images
+within it.
+
+ -->
+
+
+<!-- Tags -->
+
+
+<!--
+Paragraph tag
+Block element (100% width)
+-->
+<p>Hello World</p>
+<!-- <p>
+  <a href="#bottom">Click me to see the code snippets to copy</a>
+</p> -->
+
+
+<!--
+Anchor tag
+Link - inline element (width is as big as the content inside of it)
+-->
+<a href="http://internetconsultancy.pro">Click me!</a>
+
+<!-- This break tag makes the line go down -->
+<br />
+
+<a href="http://internetconsultancy.pro" target="_blank">This link goes to another tab because of target="_blank"</a>
+
+<br />
+<!--
+Image tag
+Inline element that shows an image
+src is the source of the image
+alt is the description of the image
+auto will set the height/width to the correct ratio of the image
+width 100% height auto for full width image
+-->
+<img src="https://goo.gl/uVqEDM" alt="Icaal logo" width="200px" height="auto"/>
+
+<!-- You can wrap anything in an anchor to link it -->
+<a href="http://internetconsultancy.pro" target="_blank">
+<h2>This is all a link!</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.</p>
+<img src="https://pbs.twimg.com/media/CgFxxnqW4AACPmm.jpg" alt="cat" width="100%" height="auto"/>
+<h2>This is all a link!</h2>
+</a>
+<!-- End of link -->
+
+
+<br />
+
+
+<!-- An image can also be floated in the text to make it align left or right -->
+<p><h2>Float!</h2> <img src="http://goo.gl/hZW5HR" alt="cat" width="200px" height="auto" style="float:right;"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper. Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis iaculis sapien.</p>
+
+
+<!--
+Span tag
+A span is an inline element normally used within a paragraph tag to highlight certain parts of the text you want to look different
+-->
+<h2>Span!</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span style="color:red;">Integer laoreet laoreet odio eu ullamcorper.</span> Aliquam eu leo nunc. Suspendisse imperdiet, justo ac varius mattis, ligula lorem suscipit est, vitae lacinia nisi est vel odio. Morbi non libero nisl. Integer pharetra est a diam pellentesque, nec commodo eros imperdiet. <span style="font-weight: bold;">Pellentesque</span> habitant morbi tristique senectus et netus et malesuada <span style="letter-spacing: 5px;">fames ac turpis egestas.</span> Maecenas quis iaculis sapien.</p>
+
+<br />
+
+<!--
+hr tag
+This tag creates a line that goes 100% width of the element it is inside - used to seperate content
+-->
+
+<hr />
+
+<br />
+
+<!--
+header tags
+These are 1-6 headers that define the importance of the title
+-->
+
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+
+<br />
+<hr />
+<br />
+
+
+
+<!-- (inline) CSS -->
+
+<!--
+
+What is CSS?
+
+Cascading Style Sheets
+
+"Cascading Style Sheets (CSS) is a style sheet language
+used for describing the presentation of a document written
+in a markup language."
+
+CSS is used to style the HTML and make the page look good, it is used for
+colours, backgrounds, layout, font, and much more.
+
+-->
+
+
+<h2>Box model</h2>
+<img src="https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif" alt="box model" />
+<br />
+
+<!-- Here is an example of box model in use in 4 steps -->
+
+<br />
+<!-- STEP 1: content
+The content is the inner most box which is just as big as the content being held (100px in this case because of width:100px)
+ -->
+<p style=" background:red; width: 100px; ">Hello</p>
+<!-- STEP 2: padding
+The padding adds more room inside of the content box (now 200px width because 100px + 50px + 50px)
+-->
+<p style=" background:red; width: 100px; padding: 50px;">Hello</p>
+<!-- STEP 3:  border
+The border adds size to the edge of the content (now 240px)
+-->
+<p style=" background:red; width: 100px; padding: 50px; border:20px solid black;">Hello</p>
+<!-- STEP 4:  margin
+The margin is space outside the element itself; pushing away other elements and moving the element itself
+(this doesnt add width to the element but takes up space so now the element has taken up 280px)
+-->
+<p style=" background:red; width: 100px; padding: 50px; border:20px solid black; margin: 20px;">Hello</p>
+
+
+
+<!--
+All padding/margin can be done on any side (all sides, topbotom/leftright or top/right/bottom/left)
+-->
+<br />
+<!-- padding: 50px(top and bottom) 20px(left and right); -->
+<p style="color: white; background:blue; width: 100px; padding: 50px 20px;">Hello</p>
+<!-- padding: 50px(top) 10px(right) 100px(bottom) 0px(left) -->
+<p style="color: white; background:blue; width: 100px; padding: 50px 10px 100px 0px;">Hello</p>
+
+<!-- This can also be done by doing them individually -->
+<p style="color: white; background:green; width: 100px; padding: 50px; border-bottom:20px solid yellow;">Hello</p>
+
+<br />
+<hr />
+
+
+
+<br />
+
+<!-- Centering -->
+
+<!--
+There are 2 main ways to center.
+
+text-align:center;
+This is for when you want to center inline elements (such as text)
+You use text-align:center; on the containter
+
+EXAMPLE
+-->
+
+<div style="margin-bottom: 50px; text-align:center">
+
+  <h2>Centered Title</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" alt="centered img" width="100px" height="auto"/>
+  <p>
+    hello this is centered! (using text-align: center;)
+  </p>
+
+
+<!--
+text-align:center; will not center block elements like a container or wrapper!
+-->
+
+  <div style="width:200px;height:200px;background:red;" class="container">
+    <p>
+      This container isn't centered
+    </p>
+  </div>
+
+
+<!--
+What is a div?
+A div is a division element that is block.
+Divs are generic containers for content, they can be used for layouts. (for example a wrapper could be a div)
+-->
+</div>
+
+
+<!--
+The other way to center is:
+
+margin: 0 auto;
+This is for centering block elements like the div above or a wrapper.
+
+0  (this is the top and bottom margin, it can be any number like 20px it doens't have to be 0)
+auto  (this is the important bit, it makes the block element have auto margin on both sides)
+
+EXAMPLE
+-->
+
+
+<div class="wrapper" style="width:800px;  margin: 0 auto;">
+  <h1>Nice</h1>
+
+  <p>
+    This is a centered wrapper using margin: 0 auto!
+  </p>
+
+  <p>
+    Now we can put everything in this wrapper to keep the content centered.
+  </p>
+
+  <img src="https://pbs.twimg.com/media/Cm2uiKdWIAEHRYo.jpg" width="100%" height="auto"/>
+
+
+  <hr style="margin: 50px 0;"/>
+
+  <p>
+    Let's style text...
+  </p>
+
+<!--
+Text style
+
+There are many ways to style text using CSS
+But you can also use html alternatives
+-->
+
+
+
+<!-- 2 ways to bold text -->
+<p style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>  <br />
+<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p></b>  <br />
+
+<!-- 2 ways to change font style -->
+<p style="font-style:italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p>  <br />
+<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</i></p>  <br />
+
+<!-- Make uppercase/lowercase -->
+<p style="text-transform:uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p><br />
+
+<!-- letter spacing (might not use this, maybe for a title)-->
+<p style="letter-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p><br />
+
+<!-- word spacing -->
+<p style="word-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p><br />
+
+<!-- text shadow -->
+<p style="text-shadow: 0px 0px 5px #444;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet laoreet odio eu ullamcorper.</p><br />
+<!--
+text-shadow:
+5px (the first number is the distance to the right the shadow is)
+10px (the second number is the distance to the bottom the shadow is)
+0px (the third number is how much the shadow spreads/blurs)
+red (the last part is the color)
+-->
+<h2 style="font-size:30px; text-shadow: 3px 3px 0 red;">SHADOW</h2>
+
+<br />
+<hr />
+<br />
+
+<h2>
+  <span style="color: red ;">C</span><span style="color: orange ;">o</span><span style="color: yellow;">l</span><span style="color:green ;">o</span><span style="color:blue">u</span><span style="color: indigo;">r</span><span style="color: violet;">?</span>
+</h2>
+
+<!--
+Colour
+
+There are 3 main ways to do colour
+
+keywords:
+There are words like "red" or "white" or "hotpink"
+-->
+
+<p style="color: red;">
+  color:red;
+</p>
+
+<!--
+hex:
+Hex colours huse a hexadecimal code to make the rgb colours
+for example: #ffffff is white
+the first two numbers are the R value, then the G value, then the B value.
+so #ff0000 is red
+-->
+
+<p style="color: #ff0000;">
+  color:#ff0000;
+</p>
+
+<!--
+The last way is RGB value
+this is when you define the red green and blue values
+-->
+
+<p style="color: rgb(255,0,0);">
+  color: rgb(255,0,0);
+</p>
+
+<!--
+The rgb value is useful as you can add an alpha value to choose the opacity.
+-->
+
+<p style="color: rgba(255,0,0,0.5);">
+  color: rgba(255,0,0,0.5);
+</p>
+
+
+
+</div>
